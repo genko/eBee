@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.d.ebee.AllgemeineInfos"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp">
+
+            <CheckBox
+                android:id="@+id/allgemeine_infos_KöniginJaNein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:checked="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allgemine_Infos_VolkstypDropdown" />
+
+            <TextView
+                android:id="@+id/allgemeineInfos_textView_Volktyp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.693"
+                app:layout_constraintStart_toEndOf="@+id/AllgInfoFluglochkeil"
+                app:layout_constraintTop_toBottomOf="@+id/allgemine_Infos_editText_SummeHonig" />
+
+            <TextView
+                android:id="@+id/Honig"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="167dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/infos.honig"
+                app:layout_constraintBottom_toBottomOf="@+id/allgemine_Infos_editText_SummeHonig"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allgemine_Infos_editText_SummeHonig" />
+
+            <TextView
+                android:id="@+id/allgemine_infos_kg"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="30dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/kg"
+                app:layout_constraintBottom_toBottomOf="@+id/allgemine_Infos_editText_SummeHonig"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allgemine_Infos_editText_SummeHonig" />
+
+            <Spinner
+                android:id="@+id/allgemine_Infos_VolkstypDropdown"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:popupBackground="@android:drawable/spinner_dropdown_background"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uebersicht.überschrift" />
+
+            <TextView
+                android:id="@+id/Volkstyp"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="167dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/infos.volkstyp"
+                app:layout_constraintBottom_toBottomOf="@+id/allgemine_Infos_VolkstypDropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allgemine_Infos_VolkstypDropdown" />
+
+            <EditText
+                android:id="@+id/allgemine_Infos_editText_SummeHonig"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="textPersonName|number"
+                app:layout_constraintEnd_toStartOf="@+id/allgemine_infos_kg"
+                app:layout_constraintTop_toBottomOf="@+id/allgemeine_infos_KöniginJaNein"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/Speichern"
+                style="@style/ButtonNormalStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:drawableEnd="@drawable/ic_action_save"
+                android:onClick="safeAndBackToVolk"
+                android:text="@string/infos.speichern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allgemeine_infos_notizen" />
+
+            <TextView
+                android:id="@+id/Königin"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="200dp"
+                android:layout_marginStart="16dp"
+
+                android:text="@string/infos.koenigin"
+                app:layout_constraintBottom_toBottomOf="@+id/allgemeine_infos_KöniginJaNein"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allgemeine_infos_KöniginJaNein" />
+
+            <TextView
+                android:id="@+id/AllgInfoFluglochkeil"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/infos.fluglochkeil"
+                app:layout_constraintBottom_toBottomOf="@+id/allgemeineInfos_textView_Volktyp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allgemeineInfos_textView_Volktyp" />
+
+            <EditText
+                android:id="@+id/allgemeine_infos_notizen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:hint="@string/notizen"
+                android:inputType="textMultiLine"
+                android:selectAllOnFocus="false"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.269"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allgemeineInfos_textView_Volktyp" />
+
+            <TextView
+                android:id="@+id/uebersicht.überschrift"
+                style="@style/TextViewStyleHeader"
+                android:layout_width="201dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/Übersicht"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

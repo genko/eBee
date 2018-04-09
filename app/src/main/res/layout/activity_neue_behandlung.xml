@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.d.ebee.NeueBehandlung">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/neueBehandlung_EditText_Notiz"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/notizen"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neueBehandlung_Spinner_Behandlungsdauer" />
+
+            <TextView
+                android:id="@+id/ueberschrift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/Behandlung"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ml"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ml"
+                app:layout_constraintBottom_toBottomOf="@+id/neueBehandlung_EditText_MLSaeure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/neueBehandlung_EditText_MLSaeure" />
+
+            <TextView
+                android:id="@+id/neueBehandlung.Menge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/ernten.menge"
+                app:layout_constraintBottom_toBottomOf="@+id/neueBehandlung_EditText_MLSaeure"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/neueBehandlung_EditText_MLSaeure" />
+
+            <TextView
+                android:id="@+id/Behandlungsart"
+                style="@style/TextViewStyleNormal"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/neueBehandlung.behandlungsart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ueberschrift" />
+
+            <Spinner
+                android:id="@+id/neueBehandlung_Spinner_Behandlungsart"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/btn_dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Behandlungsart" />
+
+            <CheckBox
+                android:id="@+id/neueBehandlung_CheckBox_WindelEingesetzt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/neueBehandlung.windel"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neueBehandlung_EditText_MLSaeure" />
+
+            <EditText
+                android:id="@+id/neueBehandlung_EditText_MLSaeure"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toStartOf="@+id/ml"
+                app:layout_constraintTop_toBottomOf="@+id/neueBehandlung_Spinner_Behandlungsart" />
+
+            <Button
+                android:id="@+id/BehandlungBeginnen"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="behandlungBeginnen"
+                android:text="@string/neueBehandlung.beginnen"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neueBehandlung_EditText_Notiz" />
+
+            <Spinner
+                android:id="@+id/neueBehandlung_Spinner_Behandlungsdauer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/neueBehandlung_CheckBox_WindelEingesetzt" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/neueBehandlung.tage"
+                app:layout_constraintBottom_toBottomOf="@+id/neueBehandlung_Spinner_Behandlungsdauer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/neueBehandlung_Spinner_Behandlungsdauer" />
+
+            <TextView
+                android:id="@+id/behandlungsdauer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/behandlungsdauer"
+                app:layout_constraintBottom_toBottomOf="@+id/neueBehandlung_Spinner_Behandlungsdauer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/neueBehandlung_Spinner_Behandlungsdauer" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

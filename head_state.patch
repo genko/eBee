@@ -1,0 +1,481 @@
+Index: app/src/main/java/com/example/d/ebee/VolkCreate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/d/ebee/VolkCreate.java	(date 1511862144000)
++++ app/src/main/java/com/example/d/ebee/VolkCreate.java	(date 1511872444000)
+@@ -53,7 +53,7 @@
+     }
+ 
+     public void toast() {
+-        Toast toast = Toast.makeText(getApplicationContext(), "Ernte wird dokumentiert", Toast.LENGTH_SHORT);
++        Toast toast = Toast.makeText(getApplicationContext(), "Volk wurde erstellt", Toast.LENGTH_SHORT);
+         toast.setGravity(Gravity.CENTER,0,0);
+         toast.show();
+     }
+Index: app/src/main/java/datenbank/TabelleErnten.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/datenbank/TabelleErnten.java	(date 1511872444000)
++++ app/src/main/java/datenbank/TabelleErnten.java	(date 1511872444000)
+@@ -0,0 +1,11 @@
++package datenbank;
++
++/**
++ * Created by maxionderon on 28.11.17.
++ */
++
++public class TabelleErnten extends Tabelle {
++
++
++
++}
+Index: app/src/main/java/tagebuch/TagebuchErnte.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/tagebuch/TagebuchErnte.java	(date 1511872444000)
++++ app/src/main/java/tagebuch/TagebuchErnte.java	(date 1511872444000)
+@@ -0,0 +1,31 @@
++package tagebuch;
++
++import android.content.Context;
++import android.widget.TextView;
++
++import vorgaenge.Ernte;
++
++/**
++ * Created by maxionderon on 28.11.17.
++ */
++
++public class TagebuchErnte extends TagebuchListenElement {
++
++    private Ernte ernte;
++
++    public TagebuchErnte(vorgaenge.Ernte ernte) {
++
++        this.ernte = ernte;
++
++    }
++
++    @Override
++    public String toString() {
++        return null;
++    }
++
++    @Override
++    public TextView getTextView(Context context) {
++        return null;
++    }
++}
+Index: app/src/main/java/vorgaenge/Arbeitsvorgang.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/vorgaenge/Arbeitsvorgang.java	(date 1511862144000)
++++ app/src/main/java/vorgaenge/Arbeitsvorgang.java	(date 1511872444000)
+@@ -6,14 +6,11 @@
+  * Created by maxionderon on 23.11.17.
+  */
+ 
+-public class Arbeitsvorgang {
++public class Arbeitsvorgang extends Vorgaenge {
+ 
+     //ID des Arbeitsvorgangs
+     private int arbeitsvorgangId;
+ 
+-    //referenz als fremdschlüssel
+-    private Volk volk;
+-
+     //Attribute des Arbeitsvorgangs
+     private int anzahlZargen;
+     private int absperrgitter;
+@@ -26,7 +23,8 @@
+     //Konstruktor
+     public Arbeitsvorgang(Volk volk){
+ 
+-        this.volk = volk;
++        super(volk);
++
+         this.anzahlZargen = 0;
+         this.absperrgitter = 0;
+         this.anzahlWaben = 0;
+@@ -41,12 +39,6 @@
+ 
+     }
+ 
+-    public int getVolkId() {
+-
+-        return this.volk.getVolkId();
+-
+-    }
+-
+     public int getAnzahlZargen() {
+ 
+         return this.anzahlZargen;
+Index: app/src/main/java/vorgaenge/Behandlung.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/vorgaenge/Behandlung.java	(date 1511862144000)
++++ app/src/main/java/vorgaenge/Behandlung.java	(date 1511872444000)
+@@ -7,14 +7,11 @@
+  * Created by maxionderon on 23.11.17.
+  */
+ 
+-public class Behandlung {
++public class Behandlung extends Vorgaenge {
+ 
+     //ID der Behandlung
+     private int behandlungId;
+ 
+-    //Fremdschlüssel Referenz auf das Volk
+-    private logik.Volk volk;
+-
+     //Attribute der Behandlung
+     private String artDerBehandlung;
+     private double menge;
+@@ -26,14 +23,14 @@
+     private long timestampCreat;
+     private long timestampFinish;
+ 
+-    //flags für Datenbank
+-    private boolean isInDatabase;
+-    private boolean dataHasChanged;
++
+ 
+     public Behandlung(int behandlungId, logik.Volk volk){
+ 
++        super(volk);
++
+         this.behandlungId = behandlungId;
+-        this.volk = volk;
++
+         this.artDerBehandlung = "";
+         this.menge = 0;
+         this.windelEingesetzt = false;
+@@ -42,9 +39,6 @@
+         this.timestampCreat = EBEEAblauf.createTimestamp();
+         this.timestampFinish = EBEEAblauf.createTimestamp();
+ 
+-        this.isInDatabase = false;
+-        this.dataHasChanged = false;
+-
+     }
+ 
+     //get-Methoden
+@@ -54,12 +48,6 @@
+ 
+     }
+ 
+-    public int getVolkId(){
+-
+-        return this.volk.getVolkId();
+-
+-    }
+-
+     public String getArtDerBehandlung(){
+ 
+         return this.artDerBehandlung;
+@@ -102,17 +90,6 @@
+ 
+     }
+ 
+-    public boolean getIsInDatabase() {
+-
+-        return this.isInDatabase;
+-
+-    }
+-
+-    public boolean getDataHasChanged() {
+-
+-        return this.dataHasChanged;
+-
+-    }
+ 
+     //setMethoden
+     public void setBehandlungId(int behandlungId){
+@@ -163,18 +140,6 @@
+ 
+     }
+ 
+-    public void setIsInDatabase(boolean isInDatabase) {
+-
+-        this.isInDatabase = isInDatabase;
+-
+-    }
+-
+-    public void setDataHasChanged(boolean dataHasChanged) {
+-
+-        this.dataHasChanged = dataHasChanged;
+-
+-    }
+-
+     //Behandlung Methoden
+ 
+ }
+Index: app/src/main/java/vorgaenge/Beobachtung.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/vorgaenge/Beobachtung.java	(date 1511862144000)
++++ app/src/main/java/vorgaenge/Beobachtung.java	(date 1511872444000)
+@@ -8,29 +8,25 @@
+  * Created by maxionderon on 23.11.17.
+  */
+ 
+-public class Beobachtung {
++public class Beobachtung extends Vorgaenge {
+ 
+     //ID der Beobachtung
+     private int beobachtungId;
+ 
+-    //Fremdschlüssel Referenz auf das Volk
+-    private Volk volk;
+-
+     //Attribute der Beobachtung
+     ArrayList<TeilBeobachtung> teilBeobachtungList;
+ 
+     //Timestamp
+     private long timstampCreat;
+ 
+-    //flags für Datenbank
+-    private boolean isInDatabase;
+-    private boolean dataHasChanged;
+ 
+     //Konstruktor
+     public Beobachtung(int beobachtungId, Volk volk){
+ 
++        super(volk);
++
+         this.beobachtungId = beobachtungId;
+-        this.volk = volk;
++
+         this.teilBeobachtungList = new ArrayList<TeilBeobachtung>();
+ 
+     }
+@@ -48,18 +44,6 @@
+ 
+     }
+ 
+-    public void setIsInDatabase(boolean isInDatabase) {
+-
+-        this.isInDatabase = isInDatabase;
+-
+-    }
+-
+-    public void setDataHasChanged(boolean dataHasChanged) {
+-
+-        this.dataHasChanged = dataHasChanged;
+-
+-    }
+-
+     public void setTeilBeobachtungList(ArrayList<TeilBeobachtung> teilBeobachtungList) {
+ 
+         this.teilBeobachtungList = teilBeobachtungList;
+@@ -80,12 +64,6 @@
+ 
+     }
+ 
+-    public int getVolkId(){
+-
+-        return this.volk.getVolkId();
+-
+-    }
+-
+     public ArrayList<TeilBeobachtung> getTeilBeobachtungList () {
+ 
+         return this.teilBeobachtungList;
+@@ -104,18 +82,6 @@
+ 
+     }
+ 
+-    public boolean getIsInDatabase() {
+-
+-        return this.isInDatabase;
+-
+-    }
+-
+-    public boolean getDataHasChanged() {
+-
+-        return this.dataHasChanged;
+-
+-    }
+-
+     //Beobachtung Methoden
+ 
+     public void addTeilBeobachtung(TeilBeobachtung teilBeobachtung) {
+Index: app/src/main/java/vorgaenge/Ernte.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/vorgaenge/Ernte.java	(date 1511872444000)
++++ app/src/main/java/vorgaenge/Ernte.java	(date 1511872444000)
+@@ -0,0 +1,93 @@
++package vorgaenge;
++
++import logik.Volk;
++
++/**
++ * Created by maxionderon on 28.11.17.
++ */
++
++public class Ernte {
++
++    //Volk als Fremdschlüssel
++    private Volk volk;
++
++    //ErnteID für Tabelle
++    private int ernteId;
++
++    private int anzahlWaben;
++    private String honigSorte;
++    private double wassergehalt;
++    private double menge;
++    private String notiz;
++
++    //Flags
++    private boolean isInDatabase;
++    private boolean dataHasChanged;
++
++    public Ernte(int ernteId, Volk volk) {
++
++        this.volk = volk;
++        this.ernteId = ernteId;
++
++    }
++
++    //get Methoden
++
++    public int getVolkId() {
++
++        return this.volk.getVolkId();
++
++    }
++
++    public int getErnteId() {
++
++        return this.ernteId;
++
++    }
++
++    public int getAnzahlWaben () {
++
++        return this.anzahlWaben;
++
++    }
++
++    public String getHonigSorte() {
++
++        return this.honigSorte;
++
++    }
++
++    public double getWassergehalt() {
++
++        return this.wassergehalt;
++
++    }
++
++    public double getMenge() {
++
++        return this.menge;
++
++    }
++
++    public String getNotiz() {
++
++        return this.notiz;
++
++    }
++
++    //set Methoden
++
++    public void setErnteId(int ernteId) {
++
++        this.ernteId = ernteId;
++
++    }
++
++    public void setAnzahlWaben(int anzahlWaben) {
++
++        this.anzahlWaben = anzahlWaben;
++
++    }
++
++
++}
+Index: app/src/main/java/vorgaenge/Vorgaenge.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/vorgaenge/Vorgaenge.java	(date 1511872444000)
++++ app/src/main/java/vorgaenge/Vorgaenge.java	(date 1511872444000)
+@@ -0,0 +1,58 @@
++package vorgaenge;
++
++import logik.Volk;
++
++/**
++ * Created by maxionderon on 28.11.17.
++ */
++
++public abstract class Vorgaenge {
++
++    //Volk als Fremdschlüssel
++    private Volk volk;
++
++    //Flags
++    private boolean isInDatabase;
++    private boolean dataHasChanged;
++
++    public Vorgaenge(Volk volk) {
++
++        this.volk = volk;
++
++    }
++
++    //get Methoden
++
++    public int getVolkId() {
++
++        return this.volk.getVolkId();
++
++    }
++
++    public boolean getIsInDatabase() {
++
++        return this.isInDatabase;
++
++    }
++
++    public boolean getDataHasChanged() {
++
++        return this.dataHasChanged;
++
++    }
++
++    //set Methoden
++
++    public void setIsInDatabase(boolean isInDatabase) {
++
++        this.isInDatabase = isInDatabase;
++
++    }
++
++    public void setDataHasChanged(boolean dataHasChanged) {
++
++        this.dataHasChanged = dataHasChanged;
++
++    }
++
++}

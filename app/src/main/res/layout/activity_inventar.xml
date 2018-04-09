@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.d.ebee.Inventar"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/inventar_button_BearbeitenOrSpeichern"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:drawableEnd="@drawable/ic_action_edit"
+                android:onClick="bearbeitenOderSpeichern"
+                android:text="@string/inventar.bearbeiten"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="382dp"
+                android:layout_height="486dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableDark">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_bezeichnung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.bezeichnung" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.ImLager" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.ImEinsatz" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableLight">
+
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Zargen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Zargen" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Zargen_ImLager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Zargen_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableDark">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Rahmen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Rahmen" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Rahmen_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Rahmen_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableLight">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Mittelwaende"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Mittelwaende" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Mittelwaende_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Mittelwaende_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableDark">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Absperrgitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Absperrgitter" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Absperrgitter_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Absperrgitter_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableLight">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Fluglochkeil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Fluglochkeil" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Fluglochkeil_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Fluglochkeil_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableDark">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Windel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Windel" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Windel_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Windel_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/invntar_textView_Saeuren"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Saeuren" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableLight">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Ameisensaeure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Ameisensaeure" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Ameisensaeure_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Ameisensaeure_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableDark">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Oxalsaeure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Oxalsaeure" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Oxalsaeure_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Oxalsaeure_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTableLight">
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Milchsaeure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/inventar.Milchsaeure" />
+
+                    <EditText
+                        android:id="@+id/inventar_editText_Milchsaeure_ImLager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/inventar_textView_Milchsaeure_ImEinsatz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0" />
+                </TableRow>
+
+            </TableLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

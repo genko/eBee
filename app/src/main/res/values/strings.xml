@@ -1,0 +1,198 @@
+<resources>
+    <!-- Seitentitel -->
+    <string name="app_name">EBEE</string>
+    <string name="HomeScreen">EBEE</string>
+    <string name="Übersicht">Übersicht</string>
+    <string name="Arbeitsvorgang">Arbeitsvorgang</string>
+    <string name="Behandlung">Behandlung</string>
+    <string name="Ernten">Ernten</string>
+    <string name="Inventar">Inventar</string>
+    <string name="Kalender">Kalender</string>
+    <string name="Tagebuch">Tagebuch</string>
+    <string name="Volk">Volk</string>
+    <string name="VolkCreate">Volk erstellen</string>
+    <string name="NeueBehandlung">Neue Behandlung</string>
+    <string name="Beobachtung">Beobachtung</string>
+    <string name="Einstellungen">Einstellungen</string>
+    <string name="ExportImport">Export/Import</string>
+
+    <!--Allgemein-->
+    <string name="notizen">Notizen&#8230;</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="prozent">%</string>
+    <string name="kg">kg</string>
+    <string name="ml">ml</string>
+    <string name="Standort">Standort:</string>
+    <string name="behandlungsdauer">Behandlungsdauer:</string>
+
+    <!-- Allgemeine Informationen-->
+    <string name="infos.volkstyp">Volkstyp:</string>
+    <string name="infos.koenigin">Königin vorhanden?</string>
+    <string name="infos.honig">Menge des Honigs:</string>
+    <string name="infos.fluglochkeil">Fluglochkeil:</string>
+    <string name="infos.speichern">Speichern</string>
+    <string name="infos.toast.updateInfo">"Allgemeine Infos werden aktualisiert"</string>
+
+
+    <!-- Arbeitsvorgang -->
+    <string name="arbeitsvorgang.zargen">Zargen:</string>
+    <string name="arbeitsvorgang.absperrgitter">Absperrgitter:</string>
+    <string name="arbeitsvorgang.waben">Waben:</string>
+    <string name="arbeitsvorgang.fluglochkeil">Fluglochkeil:</string>
+    <string name="arbeitsvorgang.abschliessen">Arbeitsvorgang abschließen</string>
+
+    <!--Behandlung-->
+    <string name="behandlung.laufendeBehandlung">Laufende Behandlung:</string>
+    <string name="behandlung.neueBehandlung">Neue Behandlung beginnen</string>
+    <string name="behandlung.behandlungBeenden">Behandlung beenden</string>
+    <string name="behandlung.toast.cancel">Behandlung wurde beendet</string>
+
+    <!--Beobachtung-->
+    <string name="hinzufuegen">Hinzufügen</string>
+    <string name="beobachtung.valid.fail">Bitte Auswahl treffen</string>
+    <string name="beobachtung.valid.success">Beobachtung wird gespeichert</string>
+    <string name="beobachtung.hint.notiz">Notizen...</string>
+
+
+    <!--Ernten-->
+    <string name="ernten.volk">Welche Völker möchtest Du ernten?</string>
+    <string name="ernten.waben">Anzahl Waben:</string>
+    <string name="ernten.honigsorte">Honigsorte:</string>
+    <string name="ernten.wassergehalt">Wassergehalt:</string>
+    <string name="ernten.menge">Menge:</string>
+    <string name="ernten.toast.notValid">"Eingabe ist nicht Valide!"</string>
+    <string name="ernten.toast.dokumentiert">Ernte wird dokumentiert</string>
+
+    <!--Home-Screen-->
+    <string name="home.hinzufuegen">Volk hinzufügen</string>
+    <string name="home.filter">Standortfilter :</string>
+    <string name="home.spinner.auswahl.all">Alle Völker</string>
+    <string name="home.exportImport">Export/Import</string>
+    <string name="home.export">Export</string>
+
+    <!--Inventar-->
+    <string name="inventar.bearbeiten">Bearbeiten</string>
+    <string name="inventar.speichern">Speichern</string>
+    <string name="inventar.bezeichnung">Bezeichnung</string>
+    <string name="inventar.ImLager">Im Lager</string>
+    <string name="inventar.ImEinsatz">Im Einsatz</string>
+    <string name="inventar.Saeuren">Säuren in ml</string>
+    <string name="inventar.Zargen">Zargen</string>
+    <string name="inventar.Rahmen">Rahmen</string>
+    <string name="inventar.Mittelwaende">Mittelwände</string>
+    <string name="inventar.Absperrgitter">Absperrgitter</string>
+    <string name="inventar.Fluglochkeil">Fluglochkeil</string>
+    <string name="inventar.Windel">Windel</string>
+    <string name="inventar.Ameisensaeure">Ameisensäure</string>
+    <string name="inventar.Oxalsaeure">Oxalsäure</string>
+    <string name="inventar.Milchsaeure">Milchsäure</string>
+    <string name="inventar.toast.save">Inventar wurde gespeichert</string>
+    <string name="inventar.toast.mody">Inventar kann nun bearbeitet werden</string>
+
+    <!--Neue Behandlung-->
+    <string name="neueBehandlung.behandlungsart">Art der Behandlung:</string>
+    <string name="neueBehandlung.windel">Windel einsetzen</string>
+    <string name="neueBehandlung.beginnen">Behandlung beginnen</string>
+    <string name="neueBehandlung.Behandlung.auswahl">Auswahl</string>
+    <string name="neueBehandlung.Behandlung.ameisensaure">Ameisensäure</string>
+    <string name="neueBehandlung.Behandlung.oxalsaure">Oxalsäure</string>
+    <string name="neueBehandlung.Behandlung.milchsaure">Milchsäure</string>
+    <string name="neueBehandlung.dauer">Behandlungsdauer:</string>
+    <string name="neueBehandlung.tage">Tage</string>
+
+    <!--Volk Create-->
+    <string name="volkCreate.name">Name:</string>
+    <string name="volkCreate.anzahlZargen">Anzahl der Zargen:</string>
+    <string name="volkCreate.volkstyp">Volkstyp:</string>
+    <string name="volkCreate.absperrgitter">Absperrgitter:</string>
+    <string name="volkCreate.fluglochkeil">Fluglochkeil:</string>
+    <string name="volkCreate.windel">Windel:</string>
+    <string name="volkCreate.drohnenrahmen">Drohnenrahmen:</string>
+    <string name="volkCreate.erstellen">Volk erstellen</string>
+
+    <!-- Beobachtung Auswahl -->
+    <string name="beobachtungAuswahl.koeniginGesehen">Königin gesehen</string>
+    <string name="beobachtungAuswahl.pollenEingetragen">Pollen eingetragen</string>
+    <string name="beobachtungAuswahl.vielFlugverkehr">Viel Flugverkehr</string>
+    <string name="beobachtungAuswahl.wenigFlugverkehr">Wenig Flugverkehr</string>
+    <string name="beobachtungAuswahl.vielFutter">Viel Futter</string>
+    <string name="beobachtungAuswahl.wenigFutter">Wenig Futter</string>
+    <string name="beobachtungAuswahl.schwarmzellen">Schwarmzellen</string>
+    <string name="beobachtungAuswahl.spielnaepfchen">Spielnäpfchen</string>
+    <string name="beobachtungAuswahl.weisellos">Weisellos</string>
+
+    <!-- Tagebuch -->
+    <string name="tagebuch.filter">Filter</string>
+    <string name="tagebuch.filterAuswahl.all">Alle</string>
+    <string name="tagebuch.filterAuswahl.behandlung">Behandlung</string>
+    <string name="tagebuch.filterAuswahl.beobachtung">Beobachtung</string>
+    <string name="tagebuch.filterAuswahl.arbeitsvorgang">Arbeitsvorgang</string>
+    <string name="tagebuch.filterAuswahl.volk">Volk</string>
+    <string name="tagebuch.filterAuswahl.ernte">Ernte</string>
+
+    <!-- Einstellungen -->
+    <string name="einstellungen.aufgeloesteVoelkerAnzeigen">Aufgelöste Völker mit anzeigen:</string>
+    <string name="einstellungen.emailAdresse">E-Mail Adresse:</string>
+
+    <!-- Export/Import -->
+    <string name="exportImport.export">Export</string>
+    <string name="exportImport.datenimport">Import</string>
+    <string name="exportImport.oder">oder</string>
+
+    <!-- logik strings-->
+    <string name="logik.Volkstyp.Aufgeloest">Aufgelöst</string>
+
+
+    <!-- Listenelemente -->
+    <string-array name="Volkstyp">
+        <item>Wirtschaftsvolk</item>
+        <item>Jungvolk</item>
+        <item>Ableger</item>
+        <item>Aufgelöst</item>
+    </string-array>
+
+    <string-array name="Fluglochkeil">
+        <item>Kein</item>
+        <item>Klein</item>
+        <item>Groß</item>
+    </string-array>
+
+    <string-array name="Honigsorte">
+        <item>Blütenhonig</item>
+        <item>Waldhonig</item>
+    </string-array>
+
+    <string-array name="Beobachtung">
+        <item>Auswahl</item>
+        <item>Königin gesehen</item>
+        <item>Weisellos</item>
+        <item>Pollen eingetragen</item>
+        <item>Viel Flugverkehr</item>
+        <item>Wenig Flugverkehr</item>
+        <item>Viel Futter</item>
+        <item>Wenig Futter</item>
+        <item>Schwarmzellen</item>
+        <item>Spielnäpfchen</item>
+    </string-array>
+
+    <string-array name="Behandlung">
+        <item>Auswahl</item>
+        <item>Ameisensäure</item>
+        <item>Oxalsäure</item>
+        <item>Milchsäure</item>
+    </string-array>
+
+    <string-array name="Behandlungsdauer">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+
+</resources>

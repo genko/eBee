@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.d.ebee.VolkCreate">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/volkErstellen"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableEnd="@drawable/ic_action_plus"
+                    android:onClick="createVolk"
+                    android:text="@string/volkCreate.erstellen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.312"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/VolktypAuswahl" />
+
+                <Spinner
+                    android:id="@+id/VolktypAuswahl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/volkCreate_EditText_Standort" />
+
+                <EditText
+                    android:id="@+id/volkCreate_EditText_Standort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:labelFor="@+id/volkCreate_textView_Standort"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NameEingabe" />
+
+                <TextView
+                    android:id="@+id/Name"
+                    style="@style/TextViewStyleNormal"
+                    android:layout_width="66dp"
+                    android:text="@string/volkCreate.name"
+                    app:layout_constraintBottom_toBottomOf="@+id/NameEingabe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/NameEingabe" />
+
+                <TextView
+                    android:id="@+id/Volktyp"
+                    style="@style/TextViewStyleNormal"
+                    android:layout_width="wrap_content"
+                    android:text="@string/volkCreate.volkstyp"
+                    app:layout_constraintBottom_toBottomOf="@+id/VolktypAuswahl"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/VolktypAuswahl" />
+
+                <EditText
+                    android:id="@+id/NameEingabe"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:labelFor="@+id/Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/volkCreate_textView_Standort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/Standort"
+                    app:layout_constraintBottom_toBottomOf="@+id/volkCreate_EditText_Standort"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/volkCreate_EditText_Standort" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

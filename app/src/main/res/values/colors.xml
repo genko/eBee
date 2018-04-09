@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFBF00</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#8a0824</color>
+    <color name="textViewBackground">#D3D3D3</color>
+    <color name="tagebuch.colorVolk">#Dda0dd</color>
+    <color name="tagebuch.colorBehandlug">#98FB98</color>
+    <color name="tagebuch.colorBeobachtung">#aFEEEE</color>
+    <color name="tagebuch.colorArbeitsvorgang">#FA8072 </color>
+    <color name="tagebuch.colorErnte">#FFE4C4</color>
+    <color name="tagebuch.colorBorder">#000000</color>
+    <color name="homeScreen.colorBorder">#000000</color>
+    <color name="colorTableDark">#7b7a7a</color>
+    <color name="colorTableLight">#c4c4c4</color>
+    <color name="inventar.colorMody">#e1c4ffc7</color>
+</resources>

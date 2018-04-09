@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.d.ebee">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name="logik.EBEEAblauf"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/HomeScreen"
+            android:screenOrientation="locked">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Inventar"
+            android:label="@string/Inventar"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".Ernten"
+            android:label="@string/Ernten"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".Arbeitsvorgang"
+            android:label="@string/Arbeitsvorgang"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".Behandlung"
+            android:label="@string/Behandlung"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".Volk"
+            android:label="@string/Volk"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".Tagebuch"
+            android:label="@string/Tagebuch"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".AllgemeineInfos"
+            android:label="@string/Übersicht"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".Kalender"
+            android:label="@string/Kalender"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".Beobachtung"
+            android:label="@string/Beobachtung"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Volk" />
+        <activity
+            android:name=".VolkCreate"
+            android:label="@string/VolkCreate"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".NeueBehandlung"
+            android:label="@string/NeueBehandlung"
+            android:screenOrientation="locked"
+            android:parentActivityName=".Behandlung" />
+        <activity
+            android:name=".Einstellungen"
+            android:label="@string/Einstellungen"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen"/>
+        <activity
+            android:name=".ExportImport"
+            android:label="@string/ExportImport"
+            android:screenOrientation="locked"
+            android:parentActivityName=".HomeScreen"/>
+
+    </application>
+
+
+
+</manifest>

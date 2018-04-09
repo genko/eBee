@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.d.ebee.Volk">
+
+    <Button
+        android:id="@+id/beobachten"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="BeobachtungChange"
+        android:text="@string/Beobachtung"
+        android:gravity="bottom|center"
+        android:paddingBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/allgemeineInfos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/arbeitsvorgang"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ArbeitsvorgangChange"
+        android:text="@string/Arbeitsvorgang"
+        android:gravity="bottom|center"
+        android:paddingBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/behandeln"
+        app:layout_constraintTop_toBottomOf="@+id/beobachten" />
+
+    <Button
+        android:id="@+id/behandeln"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="BehandlungChange"
+        android:text="@string/Behandlung"
+        android:gravity="bottom|center"
+        android:paddingBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allgemeineInfos" />
+
+    <Button
+        android:id="@+id/allgemeineInfos"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="AllgInfosChange"
+        android:text="@string/Übersicht"
+        android:gravity="bottom|center"
+        android:paddingBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tagebuch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="TagebuchChange"
+        android:text="@string/Tagebuch"
+        android:drawableEnd="@drawable/ic_action_tagebuch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ernten" />
+
+    <Button
+        android:id="@+id/ernten"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ErntenChange"
+        android:text="@string/Ernten"
+        android:drawableEnd="@drawable/ic_action_ernten"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/behandeln" />
+
+    <ImageView
+        android:id="@+id/volk_image_beobachtung"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/beobachten"
+        app:layout_constraintStart_toStartOf="@+id/beobachten"
+        app:layout_constraintTop_toTopOf="@+id/beobachten"
+        app:srcCompat="@drawable/ic_action_beobachtung" />
+
+    <ImageView
+        android:id="@+id/volk_image_allgemeineinfos"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/allgemeineInfos"
+        app:layout_constraintStart_toStartOf="@+id/allgemeineInfos"
+        app:layout_constraintTop_toTopOf="@+id/allgemeineInfos"
+        app:srcCompat="@drawable/ic_action_allginfos" />
+
+    <ImageView
+        android:id="@+id/volk_image_behandlung"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/behandeln"
+        app:layout_constraintStart_toStartOf="@+id/behandeln"
+        app:layout_constraintTop_toTopOf="@+id/behandeln"
+        app:srcCompat="@drawable/ic_action_behandlung" />
+
+    <ImageView
+        android:id="@+id/volk_image_arbeitsvorgang"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/arbeitsvorgang"
+        app:layout_constraintStart_toStartOf="@+id/arbeitsvorgang"
+        app:layout_constraintTop_toTopOf="@+id/arbeitsvorgang"
+        app:srcCompat="@drawable/ic_action_arbeitsvorgang" />
+
+</android.support.constraint.ConstraintLayout>
