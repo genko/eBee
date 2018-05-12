@@ -89,6 +89,8 @@
             android:screenOrientation="locked"
             android:parentActivityName=".HomeScreen"/>
 
+        <meta-data android:name="com.bugsnag.android.API_KEY" android:value="01d75a4dd2104b1a54d6c116a1cf9b69"/>
+
     </application>
 
 

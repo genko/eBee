@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.bugsnag.android.Bugsnag;
+
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
@@ -31,6 +33,9 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bugsnag.init(this);
+
         setContentView(R.layout.activity_home_screen);
         setTitle("Home");
         this.ebeeAblauf = (EBEEAblauf) getApplicationContext();
