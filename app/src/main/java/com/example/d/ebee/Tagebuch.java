@@ -21,6 +21,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 import logik.EBEEAblauf;
 import tagebuch.TagebuchListenElement;
@@ -46,7 +47,7 @@ public class Tagebuch extends AppCompatActivity {
         this.initFilterListener();
 
         //Icon setzen
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_action_tagebuch);
 
     }
